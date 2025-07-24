@@ -4,3 +4,4 @@ pandas==2.2.2
 plotly==5.22.0
 dash-ag-grid==2.5.0
 gunicorn==22.0.0
+wheel
