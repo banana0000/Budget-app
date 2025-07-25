@@ -190,7 +190,7 @@ app.layout = dbc.Container([
         columnDefs=[],
         rowData=[],
         style={"height": "500px", "width": "100%"},
-        theme="alpine",
+        className="ag-theme-alpine",
         dashGridOptions={
             "pagination": True,
             "paginationPageSize": 15,
