@@ -4,7 +4,8 @@ from dash import dcc, html, Input, Output, State
 import dash_bootstrap_components as dbc
 import plotly.graph_objects as go
 from dash_ag_grid import AgGrid
-
+import os
+from dash import Dash
 # Read and preprocess CSV
 df = pd.read_csv("budget.csv")
 df.columns = (
@@ -394,5 +395,7 @@ def update_details_table(clickData, department, division, costcenter, variance_r
 
     return title, columnDefs, rowData
 
+
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 8050))  # 8050 az alapértelmezett, de Render felülírja
+    app.run(host="0.0.0.0", port=port)
