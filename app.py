@@ -7,7 +7,7 @@ from dash_ag_grid import AgGrid
 import os
 from dash import Dash
 # Read and preprocess CSV
-df = pd.read_csv("budget.csv")
+df = pd.read_csv("filtered_budget.csv")
 df.columns = (
     df.columns.str.strip()
     .str.replace(" ", "_")
